@@ -1,0 +1,20 @@
+{
+    "repositories": {
+        "ivaynberg/select2": {
+            "type": "package",
+            "package": {
+                "name": "ivaynberg/select2",
+                "version": "3.4.5",
+                "source": {
+                    "url": "https://github.com/ivaynberg/select2.git",
+                    "type": "git",
+                    "reference": "tags/3.4.5"
+                }
+            }
+        }
+    },
+    "require": {
+        "twitter/bootstrap": "3.2.0",
+        "ivaynberg/select2": "3.4.5"
+    }
+}
