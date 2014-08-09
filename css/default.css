@@ -2,6 +2,11 @@
 @import "/vendor/twitter/bootstrap/dist/css/bootstrap-theme.css";
 
 /**hacks should extend via less**/
+body {
+    font-family: 'Oswald', serif;
+    font-weight: 300;
+}
+
 nav li.active a{
     color: #d86440 !important;
 }
