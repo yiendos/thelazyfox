@@ -2,20 +2,27 @@
 @import "/vendor/twitter/bootstrap/dist/css/bootstrap-theme.css";
 
 /**hacks should extend via less**/
-nav li ::after{
-    content: "  /  " ;
-    width: 10px;
-}
-
 nav li.active a{
     color: #d86440 !important;
 }
 
-nav li a{
-    color: #9D9D9C;
+nav li.divider-vertical:after{
+    content: " / ";
+    display:block;
 }
 
-.navbar-default{
+nav li.divider-vertical{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #929292;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default,
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus{
     background-image: none;
     filter: none;
     background-repeat: no-repeat;
