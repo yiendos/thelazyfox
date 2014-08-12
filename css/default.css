@@ -7,6 +7,17 @@ body {
     font-weight: 300;
 }
 
+nav, h3 {
+    text-transform: uppercase;
+}
+
+h3{
+    color:#3C3C3B;
+}
+
+nav > .container > div{
+    border-bottom: #A8A8A8 1px solid;
+}
 nav li.active a{
     color: #d86440 !important;
 }
@@ -24,6 +35,14 @@ nav li.divider-vertical{
     color: #929292;
 }
 
+#section p{
+    color: #A2A2A2;
+}
+
+#section .section-header{
+    margin-bottom: 35px;
+}
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default,
 .navbar-default .navbar-nav > .active > a:hover, 
@@ -38,7 +57,7 @@ nav li.divider-vertical{
     border-color: #e7e7e7;
 }
 
-#home .img-responsive{
+#home .img-responsive, #section .img-responsive{
     margin-top: 35px;
 }
 
