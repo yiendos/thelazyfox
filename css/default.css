@@ -38,6 +38,10 @@ nav li.divider-vertical{
     border-color: #e7e7e7;
 }
 
+#home .img-responsive{
+    margin: 35px 0 35px 0;
+}
+
 footer{
     color: #6D6D6C;
 }
