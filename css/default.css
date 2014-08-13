@@ -66,10 +66,14 @@ nav li.divider-vertical{
     margin-bottom: 35px;
 }
 
-#home .img-responsive, #section .img-responsive{
+#home .img-responsive, #section .img-responsive, #project .img-responsive{
     margin-top: 35px;
 }
 
 footer{
     color: #6D6D6C;
+}
+
+#project ul li{
+    list-style: none;
 }
