@@ -28,16 +28,9 @@ nav li.active a{
     padding: 0 0px 0 10px;
 }
 
-/*nav li.divider-vertical:after{
-    content: " / ";
-    display:block;
+.navbar-right li ::after {
+    content:none;
 }
-
-nav li.divider-vertical{
-    padding-top: 15px;
-    padding-bottom: 15px;
-}*/
-
 
 .navbar-default .navbar-nav > li > a{
     color: #929292;
