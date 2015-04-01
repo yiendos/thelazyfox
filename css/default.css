@@ -77,3 +77,7 @@ footer{
 #project ul li{
     list-style: none;
 }
+
+.navbar-brand {
+    padding: 0 !important;
+}
