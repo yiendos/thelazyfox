@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Lazy Fox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:bold,light,regular">
+    <!-- Bootstrap -->
+    <link href="/css/default.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53ee3bba766da004"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+</head>
+<body>
+<div id="home">
+    <nav class="navbar navbar-wrapper navbar-default" role="navigation">
+        <div class="container">
+            <!-- @todo move this style into stylesheet -->
+            <div>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/Branding/lazyfox-logo-2.png"/></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="/illustration/"> Illustration </a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="/design/"> Design </a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="/Justforfun/"> Just for fun </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="divider-vertical"></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Perhaps you'd like a title here?</h3>
+                <p>Perhaps you'd like an introductory paragraph or two?</p>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <form id="contact-form" name="contact-form" action="http://formspree.io/yiendos@sbmatrix.com" method="post">
+                    <div class="control-group">
+                        <label class="control-label" for="name">Name: </label>
+                        <div class="controls">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email address: </label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="message">Message: </label>
+                        <textarea name="message" id="message" class="form-control" rows="15" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="height: 1px; background-color: #6D6D6C; text-align: right">
+                    <span style="background-color: white; position: relative; top: -0.5em; padding-left: 14px; ">
+                        Copyright TheLazyFox <span class="update-date">2014</span>. All rights reserved
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    jQuery( document ).ready(function() {
+        jQuery('.update-date').html(jQuery.datepicker.formatDate('yy', new Date()));
+
+        jQuery("#contact-form").validate({
+            errorClass: 'error',
+            errorElement: 'p',
+            highlight: function (element, errorClass, validClass) {
+                if (element.type === 'radio') {
+                    this.findByName(element.name).closest('div.control-group').removeClass(validClass).addClass(errorClass);
+                }else {
+                    $(element).closest('div.control-group').removeClass(validClass).addClass(errorClass);
+                }
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                if (element.type === 'radio') {
+                    this.findByName(element.name).parent('div').parent('div').removeClass(errorClass).addClass(validClass);
+                } else {
+                    $(element).closest('div.control-group').removeClass(errorClass).addClass(validClass);
+                    $(element).next('span.help-inline').text('');
+                }
+            },
+            errorPlacement: function(error, element) {
+                var $element      = $(element);
+                var isInputAppend = ($element.parent('div.input-append').length > 0);
+                if (isInputAppend) {
+                    appendElement = $element.next('span.add-on');
+                    error.insertAfter(appendElement);
+                }else {
+                    // Insert it right out of input-group
+                    var parent = $element.parent();
+                    error.insertAfter(parent.hasClass('input-group') ? parent : $element);
+                }
+            }
+        });
+    });
+</script>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
