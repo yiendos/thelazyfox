@@ -12,7 +12,6 @@
 <div id="project">
     <nav class="navbar navbar-wrapper navbar-default" role="navigation">
         <div class="container">
-            <!-- @todo move this style into stylesheet -->
             <div>
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -28,13 +27,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="/illustration/"> Illustration </a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="/design/"> Design </a></li>
                         <li class="divider-vertical"></li>
-                        <li><a href="/justforfun/"> Just for fun </a></li>
+                        <li class="active"><a href="/justforfun/"> Just for fun </a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="divider-vertical"></li>
@@ -46,23 +45,45 @@
     </nav>
     <div class="container">
         <div class="section-header row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <h3>Just for fun 3</h3>
                 <p>Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Sed porttitor lectus nibh.</p>
                 <p>Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</p>
             </div>
-            <div class="col-sm-6"><img class="img-responsive" src="/images/imagespacer300.jpg"></div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-sm-8 col-xs-12">
-                <a href="#"><img class="img-responsive" src="/images/imagespacer300.jpg"></a>
-            </div>
-            <div class="col-lg-6 col-sm-4 col-xs-12">
-                <ul>
-                    <li><a href="#"><img class="img-responsive" src="/images/imagespacer300.jpg"></a></li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <a href="/design/curlnation.html"><img class="img-responsive opacity" src="/images/design/005a-curl-nation.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="illustration/illustration16.html"><img class="img-responsive opacity" src="/images/illustration/016a-pigeons.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="/design/barbers-arms.html"><img class="img-responsive opacity" src="/images/design/018a-barbers-arms.png"></a>
+                </div>
 
+                <div class="col-md-4 col-sm-6">
+                    <a href="#"><img class="img-responsive opacity" src="/images/illustration/006a-oriental-carp.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="/design/rsrecords.html"><img class="img-responsive opacity" src="/images/design/004a-rs-records.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#"><img class="img-responsive opacity" src="/images/illustration/004a-pinup-girl.png"></a>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <a href="#"><img class="img-responsive opacity" src="/images/design/007a-bush-junkie.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#"><img class="img-responsive opacity" src="/images/illustration/005a-the-relaxing-fox.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="/design/jiumi.html"><img class="img-responsive opacity" src="/images/just-for-fun/"></a>
+                </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -82,7 +103,13 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    jQuery( document ).ready(function() {
+        jQuery('.update-date').html(jQuery.datepicker.formatDate('yy', new Date()));
+    });
+</script>
 </body>
 </html>

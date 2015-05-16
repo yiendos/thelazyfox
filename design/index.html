@@ -12,7 +12,6 @@
 <div id="section">
     <nav class="navbar navbar-wrapper navbar-default" role="navigation">
         <div class="container">
-            <!-- @todo move this style into stylesheet -->
             <div>
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -28,11 +27,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="/illustration/"> Illustration </a></li>
                         <li class="divider-vertical"></li>
-                        <li><a href="/design/"> Design </a></li>
+                        <li class="active"><a href="/design/"> Design </a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="/justforfun/"> Just for fun </a></li>
                     </ul>
@@ -46,13 +45,14 @@
     </nav>
     <div class="container">
         <div class="section-header row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <h3>Design</h3>
-                <p>Examples recent design projects.<p/>
-                <p>All designs are bespoke creations, working with clients from initial concept through to completion.</p>
+                <p>When taking on any project, from logo designs and simple websites, right through to brand identities and full scale commerce sites, my approach is the same. Every project I work on requires dedication and understanding, both of the industry, the individual business and also the requirements and desires of the client. Each project requires careful consultation to ensure there is the fundamental understanding of what is required. I take the time to research the field and familiarise myself with the particular market in order to create designs that satisfy the brief and also to produce interesting, creative and aesthetically pleasing artwork for any purpose. </p>
+                <p>Clients are encouraged to be involved with the design process throughout to give feedback on initial concepts, utilising over 15 years of experience I offer guidance and direction on the most appropriate direction to take. </p>
+                <p> I use my extensive skills in digital packages, as well as more traditional skill sets such as free hand illustration when producing bespoke solutions. The following examples are a small selection of design projects ranging from full scale branding and logos, to website design and print. </p>
             </div>
-            <div class="col-sm-9">
-                <a href="#"><img class="img-responsive opacity" src="/images/imagespacer300.jpg"></a>
+            <div class="col-sm-8">
+                <a href="aisthorpe.html"><img class="img-responsive opacity" src="/images/design/000-design-header.png"></a>
             </div>
         </div>
         <div class="row">
@@ -70,27 +70,27 @@
                 <a href="waisted.html"><img class="img-responsive opacity" src="/images/design/001a-waisted.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
-                <a href="aisthorpe.html"><img class="img-responsive opacity" src="/images/design/008a-aisthorpe.png"></a>
+                <a href="onside.html"><img class="img-responsive opacity" src="/images/design/021a-onside.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <a href="jiumi.html"><img class="img-responsive opacity" src="/images/design/013a-jiumi.png"></a>
             </div>
 
             <div class="col-lg-4 col-sm-6 col-xs-12">
-                <a href="design7.html"><img class="img-responsive opacity" src="/images/design/007a-bush-junkie.png"></a>
+                <a href="bush-junkie.html"><img class="img-responsive opacity" src="/images/design/007a-bush-junkie.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
-                <a href="Joannegregory.html"><img class="img-responsive opacity" src="/images/design/020a-joanne-gregory.png"></a>
+                <a href="joannegregory.html"><img class="img-responsive opacity" src="/images/design/020a-joanne-gregory.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <a href="bps.html"><img class="img-responsive opacity" src="/images/design/011a-bps.png"></a>
             </div>
 
             <div class="col-lg-4 col-sm-6 col-xs-12">
-                <a href="Remade.html"><img class="img-responsive opacity" src="/images/design/010a-remade.png"></a>
+                <a href="remade.html"><img class="img-responsive opacity" src="/images/design/010a-remade.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
-                <a href="design11.html"><img class="img-responsive opacity" src="/images/design/012a-magpie.png"></a>
+                <a href="#"><img class="img-responsive opacity" src="/images/design/012a-magpie.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <a href="babybug.html"><img class="img-responsive opacity" src="/images/design/017a-baby-bug.png"></a>
@@ -110,7 +110,7 @@
                 <a href="postbuddy.html"><img class="img-responsive opacity" src="/images/design/019a-post-buddy.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
-                <a href="design17.html"><img class="img-responsive opacity" src="/images/design/016a-ruby-prom.png"></a>
+                <a href="#"><img class="img-responsive opacity" src="/images/design/016a-ruby-prom.png"></a>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <a href="truecorset.html"><img class="img-responsive opacity" src="/images/design/002a-true-corset.png"></a>
@@ -134,7 +134,13 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    jQuery( document ).ready(function() {
+        jQuery('.update-date').html(jQuery.datepicker.formatDate('yy', new Date()));
+    });
+</script>
 </body>
 </html>
