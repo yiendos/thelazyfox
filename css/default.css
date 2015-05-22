@@ -96,3 +96,15 @@ img.opacity:hover {
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
 }
+
+.other-contact{
+    margin-top: 35px;
+}
+
+.other-contact h3 {
+    color: #B1B1B1;
+}
+
+.other-contact p{
+    color: #585757;
+}
