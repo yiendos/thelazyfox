@@ -1,5 +1,0 @@
-Options +FollowSymlinks
-RewriteEngine on
-RewriteCond %{REQUEST_URI} !/holding.html$
-
-RewriteRule $ /holding.html [R=307,L]
